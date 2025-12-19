@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"  />
+  <title>介紹患上不出道就會死得病</title>
+  <style type="text/css">
+    .aa1
+    {
+        color: #f8f0f6;
+        text-align: center;
+        font-size: 80px;
+      background: #AC745D; 
+    }
+    .aa2
+    {
+        color: #643519ef;
+        text-align: center;
+        font-size: 20px;
+        background: rgb(255, 191, 228);
+    }
+    .aa3
+    {
+        color: #0b0029;
+        text-align: center;
+        font-size: 20px;
+        background: rgb(251, 202, 255);
+    }
+    .aa4
+    {
+        color: #000000;
+        text-align: center;
+        font-size:20px;
+      background: rgb(255, 255, 255); 
+      
+    }
+   #centeredmenu {
+            clear: both;
+            float: left;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #000;
+            /* black line below menu */
+            width: 100%;
+            font-family: Verdana, Geneva, sans-serif;
+            /* Menu font */
+            font-size: 50%;
+            /* Menu text size */
+            z-index: 1000;
+            /* This makes the dropdown menus appear above the page content below */
+            position: relative;
+            background: #AC745D;
+        }
+
+        /* Top menu items */
+        #centeredmenu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            float: right;
+            position: relative;
+            right: 50%;
+        }
+
+        #centeredmenu ul li {
+            margin: 0 0 0 1px;
+            padding: 0;
+            float: left;
+            position: relative;
+            left: 50%;
+            top: 1px;
+        }
+
+        #centeredmenu ul li a {
+            display: block;
+            margin: 0;
+            padding: .6em .5em .4em;
+            font-size: 1em;
+            line-height: 1em;
+            background: #ffefb9;
+            text-decoration: none;
+            color: #240101;
+            font-weight: bold;
+            border-bottom: 1px solid #ff9a9a;
+        }
+
+        #centeredmenu ul li a:hover {
+            background: #36f;
+            /* Top menu items background colour */
+            color: #fff;
+            border-bottom: 1px solid #03f;
+        }
+
+        #centeredmenu ul li:hover a,
+        #centeredmenu ul li.hover a {
+            /* This line is required for IE 6 and below */
+            background: #36f;
+            /* Top menu items background colour */
+            color: #fff;
+            border-bottom: 1px solid #03f;
+        }
+
+        /* Submenu items */
+        #centeredmenu ul ul {
+            display: none;
+            /* Sub menus are hiden by default */
+            position: absolute;
+            top: 2em;
+            left: 0;
+            right: auto;
+            /*resets the right:50% on the parent ul */
+            width: 10em;
+            /* width of the drop-down menus */
+        }
+
+        #centeredmenu ul ul li {
+            left: auto;
+            /*resets the left:50% on the parent li */
+            margin: 0;
+            /* Reset the 1px margin from the top menu */
+            clear: left;
+            width: 100%;
+        }
+
+        #centeredmenu ul ul li a,
+        #centeredmenu ul li.active li a,
+        #centeredmenu ul li:hover ul li a,
+        #centeredmenu ul li.hover ul li a {
+            /* This line is required for IE 6 and below */
+            font-size: .8em;
+            font-weight: normal;
+            /* resets the bold set for the top level menu items */
+            background: #eee;
+            color: #444;
+            line-height: 1.4em;
+            /* overwrite line-height value from top menu */
+            border-bottom: 1px solid #ddd;
+            /* sub menu item horizontal lines */
+        }
+
+        #centeredmenu ul ul li a:hover,
+        #centeredmenu ul li.active ul li a:hover,
+        #centeredmenu ul li:hover ul li a:hover,
+        #centeredmenu ul li.hover ul li a:hover {
+            /* This line is required for IE 6 and below */
+            background: #36f;
+            /* Sub menu items background colour */
+            color: #fff;
+        }
+
+        /* Flip the last submenu so it stays within the page */
+        #centeredmenu ul ul.last {
+            left: auto;
+            /* reset left:0; value */
+            right: 0;
+            /* Set right value instead */
+        }
+
+        /* Make the sub menus appear on hover */
+        #centeredmenu ul li:hover ul,
+        #centeredmenu ul li.hover ul {
+            /* This line is required for IE 6 and below */
+            display: block;
+            /* Show the sub menus */
+        }
+        
+         .grid-wrapper {
+            display: grid;
+            /* 定義三欄，每欄等寬 */
+            grid-template-columns: repeat(3, 1fr); 
+            /* 格子之間的間距 */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 2. 每個角色的格子 */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center; /* 文字居中 */
+            background-color: #f9f9f9;
+            transition: transform 0.2s;
+        }
+
+        /* 滑鼠移上去的小動畫 */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* 3. 圖片設定：填滿格子寬度 */
+        .card img {
+            width: 100%;       /* 寬度隨格子調整 */
+            height: 800px;     /* 固定高度，確保格子整齊 */
+            object-fit: cover; /* 裁切圖片以填滿區域而不變形 */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 4. 響應式設計：螢幕小時改為兩欄或一欄 */
+        @media (max-width: 900px) {
+            .grid-wrapper { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .grid-wrapper { grid-template-columns: 1fr; }
+        }
+       
+       
+</style>
+</style>
+</head>
+<body>
+    <body>
+        <h1 class="aa2">零經驗素人登場，他的命運就掌握在各位股東手上──
+現在，請投資準備一飛沖天的偶像吧！</h1>
+        <div class="aa1">患上不出道就會死得病<div>
+    </body>
+<div id="centeredmenu">
+        <ul>
+            <li><a href="#">非官方二創翻唱</a>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=shL3g3xOM2w&list=PL_mEofiTFuiQAOVSlErbkRMaZZtvSJEV7">Hi- Five</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=oI0BxCfyays&list=PL_mEofiTFuiQAOVSlErbkRMaZZtvSJEV7&index=2">Magical Boy</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL_mEofiTFuiQAOVSlErbkRMaZZtvSJEV7">歌單</a></li>
+                </ul>
+            </li>
+            <li><a href="#">購買管道</a>
+                <ul>
+                    <li><a href="https://search.books.com.tw/search/query/key/%E6%82%A3%E4%B8%8A%E4%B8%8D%E5%87%BA%E9%81%93%E5%B0%B1%E6%9C%83%E6%AD%BB%E7%9A%84%E7%97%85/cat/all/fclick/autocmp-pc">博客來</a></li>
+                    <li><a href="https://www.kadokawa.com.tw/products/4711289625674?srsltid=AfmBOorqoLq6PaRkDbZGNobEuoEOKdC-5MM-nrRXH52H9zpTUtMEZEml">台灣角川</a></li>
+                    <li><a href="https://www.eslite.com/product/10012011762682827354009">誠品</a></li>
+                    <li><a href="https://www.bookwalker.com.tw/product/240991?srsltid=AfmBOoqI87bMf6TT6ytExHwnBGIMAY7ohWjd5ODoEy8SyfwnqJ9-Ja-w">BOOK☆WALKER </a></li>
+                </ul>
+            </li>
+            <li><a href="#">推薦心得</a>
+                <ul class="last">
+                    <li><a href="https://www.dcard.tw/f/webtoon/p/254667769">Dcard</a></li>
+                    <li><a href="https://wowsaime.pixnet.net/blog/posts/16150340450">痞客邦</a></li>
+                    <li><a href="https://www.instagram.com/p/DC89HxxTRxV/">ig</a></li>
+                </ul>
+            </li>
+        </ul>
+       
+</div>
+<div class="aa4">
+<p STYLE='background-color:#8db9ee;FONT-SIZE:25PX'>簡介</p>
+<p>　<SPAN
+STYLE='FONT-SIZE:20PX;color:red'>［不出道就會死］</SPAN>
+未於規定時間內成為偶像出道時，死亡。
+　試問一夜之間穿越到三年前，
+</p><p>
+突然從國考生搖身一變，當上偶像練習生的感受如何？
+柳建佑保證，絕對不會有人比他更瞭解。
+</p>
+<p>
+從最初發現自己跑進了「朴炆旲」的身體裡，
+到真的能夠召喚出「狀態窗」，驗證那些特性的虛實，
+　他很清楚，這串鮮紅大字不是在開玩笑……
+　正好最近有一檔轟動全國的選秀節目即將開播，
+　這無疑是他最好的選擇，於是……
+　「朴炆旲」出道計畫第一步：成為偶像練習生！</p>
+<p STYLE='background-color:#88b3e9;FONT-SIZE:25PX'>角色介紹</p>
+<div class="grid-wrapper">
+    <!-- 第 1 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/5GAbob5TWBRG6HjPi2jMON.jpg">
+        <h2>朴炆旲</h2>
+        <p>表面冷漠但重情重義的人，廚藝滿點，怕鬼的反差很可愛</p>
+    </div>
+
+    <!-- 第 2 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/5tBSoaaLMZIEjzRBkf2YEd.jpg">
+        <h2>李世振B</h2>
+        <p>情商很高，但外熱內冷，無法輕易走進他的心</p>
+    </div>
+
+    <!-- 第 3 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/5huscSoOXRMIXlDypnbwDm.jpg">
+        <h2>宣雅炫</h2>
+        <p>容易害羞，但個性認真、努力，不隨波逐流，不是軟弱的人</p>
+    </div>
+
+    <!-- 第 4 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/5Y45HWxaIQAQF0wKTMHWov.jpg">
+        <h2>金來彬</h2>
+        <p>反差代表之一，與外表相反是個認真的乖小孩</p>
+    </div>
+
+    <!-- 第 5 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/4qhv6zuD2UFiNsbvmt9uAZ.jpg">
+        <h2>車尤金</h2>
+        <p>完全的忙內，可是該帥的時候也很帥的類型。</p>
+    </div>
+
+    <!-- 第 6 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/3y1RLNqYaNVpr1lzp8hJxm.jpg">
+        <h2>李世振A</h2>
+        <p>前期有點不合群，但後面又可愛又可靠的鼠鼠大哥。</p>
+    </div>
+
+    <!-- 第 7 格 -->
+    <div class="card">
+        <img src="https://images.plurk.com/3wIN0uJyIQ5OyvLC37wOiM.jpg">
+        <h2>柳清佑</h2>
+        <p>前射箭國手，很敏銳，穩重可靠的隊長</p>
+    </div>
+</div>
+<div class="aa3">台灣中文版權:知翎文化(小說)和台灣角川(漫畫)分原作：DS.Back 腳本：Jangjin 繪師：SOHEUN </div>
+</body>
+
+
+
+</html>
